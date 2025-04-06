@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Official Residence Statement</title>
+</head>
+<style>@page {
+    size: A4;
+    margin: 0;
+}
+body {
+    font-family: 'Courier New', monospace;
+    margin: 0;
+    padding: 30px;
+    font-size: 12px;
+    line-height: 1.4;
+}
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.columns {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+.from-section, .to-section {
+    width: 48%;
+    border: 1px solid black;
+    padding: 10px;
+}
+.transaction-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+.transaction-table td {
+    padding: 3px 0;
+    vertical-align: top;
+}
+.transaction-table-th {
+    text-align: left;
+}
+.amount-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+    border-top: 1px solid #000;
+    padding-top: 10px;
+}
+.amount-grid div {
+    text-align: center;
+    padding: 5px;
+    border-right: 1px solid #ddd;
+}
+.amount-grid div:last-child {
+    border-right: none;
+}
+.bank-details {
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid black;
+}
+.dotted-line {
+    border-top: 1px dashed black;
+    margin: 15px 0;
+}
+.dashed-border {
+    border-top: 1px dashed black;
+}
+input {
+    border: 1px solid #ccc;
+    padding: 2px;
+    margin-bottom: 5px;
+    width: 200px;
+}
+
+</style>
+<body>
+
+    <div id="document">
+        <div class="header"></div>
+        <h1>STATEMENT</h1>
+        <div>Date: <span id="date">21/03/2025</span></div>
+        <div>Customer Reference: <span id="ref">00017146</span></div>
+        <div>Page: 1</div>
+
+        <div class="dotted-line"></div>
+
+        <div class="columns">
+            <div class="from-section">
+                <h3>FROM</h3>
+                <p><strong>MICHAEL UDEAZI PROPERTIES</strong></p>
+                <p>VAT NO: 4800283186</p>
+                <p>POSTAL ADDRESS:<br>
+                P.O Box 1916<br>
+                16 Pascoe Avenue<br>
+                Kempton Park</p>
+            </div>
+
+            <div class="to-section">
+                <h3>TO</h3>
+                <p><strong id="customerName">REGINE MUSAFIRI</strong></p>
+                <p>CUSTOMER VAT NO: <span id="vatNo"></span></p>
+                <p>PHYSICAL ADDRESS:<br>
+                16 Pascoe Avenue<br>
+                Kempton Park<br>
+                1916</span></p>
+            </div>
+        </div>
+
+        <table class="transaction-table">
+            <thead>
+            <tr>
+                <th class="transaction-table-th">Date</th>
+                <th>Reference</th>
+                <th>Description</th>
+                <th>Debit</th>
+                <th>Credit</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td colspan="5" class="dashed-border"></td>
+            </tr>
+            <tr>
+                <td>01/01/2025</td>
+                <td></td>
+                <td>Brought Forward</td>
+                <td>R 3,200.00</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>28/01/2025</td>
+                <td>RCP0000745</td>
+                <td>00017146, February payment - INV0000624</td>
+                <td></td>
+                <td>R 2,400.00</td>
+            </tr>
+            <tr>
+                <td>01/03/2025</td>
+                <td>RCP0000801</td>
+                <td>00017146, March payment - INV0000624</td>
+                <td></td>
+                <td>R 2,200.00</td>
+            </tr>
+            <tr>
+                <td>31/03/2025</td>
+                <td>RCP0000801</td>
+                <td>00017146, April payment - INV0000624</td>
+                <td></td>
+                <td>R 2,300.00</td>
+            </tr>
+            <tr>
+                <td>01/04/2025</td>
+                <td>INV0000629</td>
+                <td>RR101 - Rent - Residential - 00017146</td>
+                <td>R 2,200.00</td>
+                <td></td>
+            </tr>
+            </tbody>
+        </table>
+
+        <div class="dotted-line"></div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <div class="amount-grid">
+            <div>120+ Days<br>R 0.00</div>
+            <div>90 Days<br>R 0.00</div>
+            <div>80 Days<br>R 0.00</div>
+            <div>30 Days<br>R 0.00</div>
+            <div>Current<br>R <span id="amount">2,200.00</span></div>
+            <div>Amount Due<br>R 3,000.00</div>
+            <div>Amount Paid<br>R 2,300.00</div>
+        </div>
+
+        <div class="bank-details">
+            <p><strong>Banking Details:</strong><br>
+            MICHAEL I UDEAZI<br>
+            FNB Bank<br>
+            Acc: 63007213753</p>
+            <p><strong>Your balance is now due</strong></p>
+        </div>
+    </div>
+    
+</body>
+</html>
